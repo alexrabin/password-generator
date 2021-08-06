@@ -18,12 +18,11 @@ class App extends React.Component {
     }
 
   }
+  
   getLenOptions () {
       let items = [];         
       for (let i = 0; i <= 128; i++) {             
            items.push(<option key={i} value={i}>{i}</option>);   
-           //here I will be creating my options dynamically based on
-           //what props are currently passed to the parent component
       }  
       return items;
   }
