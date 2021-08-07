@@ -1,6 +1,6 @@
 # Password-Generator
 This is a password generator built with react and bootstrap.
-
+Test out project at https://alexrabin.github.io/password-generator/
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
