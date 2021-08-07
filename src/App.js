@@ -97,32 +97,25 @@ class App extends React.Component {
     textField.remove();
   }
   generatePassword(){
-    console.log("clicked gen pas")
 
     let options = [];
     if (this.state.symbols){
       const syms = "!?&@#$%".split("");
       options.push(...syms); 
-      console.log("added symbols")
     }
     if (this.state.numbers){
       const nums = "0123456789".split("");
       options.push(...nums);
-      console.log("added numbers")
 
     }
     if (this.state.lowerChars){
       const chars = "abcdefghijklmnopqrstuvwyxz".split("");
       options.push(...chars);
-      console.log("added lower chars")
 
     }
     if (this.state.upperChars){
       const chars = "ABCDEFGHIJKLMNOPQRSTUVWYXZ".split("");
       options.push(...chars);
-
-      console.log("added upperChars")
-
     }
     if (options.length === 0){
       this.setState({showErrorMessage: true});

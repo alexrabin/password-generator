@@ -1,4 +1,4 @@
-# React-Password Generator
+# Password-Generator
 This is a password generator built with react and bootstrap.
 
 # Getting Started with Create React App
