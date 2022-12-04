@@ -14,7 +14,8 @@ class App extends React.Component {
       lowerChars: true,
       upperChars: true,
       password : '',
-      showErrorMessage: false
+      showErrorMessage: false,
+      copied: false
     }
 
   }
@@ -72,9 +73,11 @@ class App extends React.Component {
                 <div className="input-group" style={{margin: "10px 0px"}}>
                     <input type="text" className="form-control"  name="newPwd" value={this.state.password} readOnly/>
                     <Button variant="dark" onClick={this.handleCopy.bind(this)}>Copy</Button>
-
+                    
                 </div>
-                
+                <div>
+                {this.state.copied && <label className='text-success'>Copied to clipboard!</label>}
+                </div>
             </div>
           </div>
          </Container>
@@ -95,6 +98,9 @@ class App extends React.Component {
     textField.select();
     document.execCommand('copy');
     textField.remove();
+    this.setState(currentState => {
+      return {...currentState, copied: true}
+    })
   }
   generatePassword(){
 
